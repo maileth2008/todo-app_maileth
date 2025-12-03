@@ -1,24 +1,20 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import Home from "./pages/Home";
-import Todos from "./pages/Todos";
-import Registro from "./pages/Registro";
+import { Routes, Route, Link } from 'react-router-dom'
+import Home from './pages/Home'
+import Pokemons from './pages/Pokemons'
+import Registro from './pages/Registro'
 
-function App() {
+export default function App(){
   return (
-    <BrowserRouter>
-      <nav style={{ display: "flex", gap: "20px", padding: "10px" }}>
-        <Link to="/">Home</Link>
-        <Link to="/todos">Todos</Link>
-        <Link to="/registro">Registro</Link>
+    <div>
+      <nav>
+        <Link to="/">Home</Link> | <Link to="/pokemons">Pokemons</Link> | <Link to="/registro">Registro</Link>
       </nav>
-
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/todos" element={<Todos />} />
+        <Route path="/pokemons" element={<Pokemons />} />
         <Route path="/registro" element={<Registro />} />
       </Routes>
-    </BrowserRouter>
-  );
+    </div>
+  )
 }
 
-export default App;
