@@ -3,16 +3,26 @@ import { useState, useEffect } from "react";
 export default function Pokemons(){
   const [todos, setTodos] = useState([]);
   const [nuevoTodo, setNuevoTodo] = useState("");
+  const [cargando, setCargando] = useState(true);
 
-  useEffect(() => {
-    fetch("https://pokeapi.co/api/v2/pokemon?limit=20")
-      .then(r => r.json())
-      .then(data => {
-        const list = data.results.map((p,i) => ({ id: i+1, title: p.name, completed: false }));
-        setTodos(list);
-      })
-      .catch(e => console.error(e));
-  }, []);
+
+ useEffect(() => {
+  
+
+  fetch("https://pokeapi.co/api/v2/pokemon?limit=20")
+    .then(r => r.json())
+    .then(data => {
+      const list = data.results.map((p,i) => ({
+        id: i+1,
+        title: p.name,
+        completed: false
+      }));
+      setTodos(list);
+    })
+    .catch(e => console.error(e))
+    .finally(() => setCargando(false));   
+}, []);
+
 
   function agregarTodo(e){
     e.preventDefault();
@@ -37,6 +47,8 @@ export default function Pokemons(){
   return (
     <div>
       <h1>PokéTodos</h1>
+
+      {cargando && <p>Cargando Pokemons...</p>} 
 
       <form onSubmit={agregarTodo}>
         <input value={nuevoTodo} onChange={e => setNuevoTodo(e.target.value)} placeholder="Nuevo Poké-TODO" />
