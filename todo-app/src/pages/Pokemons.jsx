@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import PokemonForm from "../componentes/PokemonForm";
-import PokemonItem from "../componentes/PokemonItem";
+import PokemonForm from "./componentes/PokemonForm";
+import PokemonItem from "./componentes/PokemonItem";
+
 
 export default function Pokemons() {
   const [todos, setTodos] = useState([]);
@@ -41,42 +42,41 @@ export default function Pokemons() {
   }
 
   function toggleTodo(id) {
-    setTodos(
-      todos.map((t) =>
-        t.id === id ? { ...t, completed: !t.completed } : t
-      )
-    );
-  }
-
-  function eliminarTodo(id) {
-    setTodos(todos.filter((t) => t.id !== id));
-  }
-
-  return (
-    <div>
-      <h1>PokéTodos</h1>
-
-      {cargando && <p>Cargando Pokemons....</p>}
-      {error && <p style={{ color: "red" }}>{error}</p>}
-
-      {/* Formulario separado */}
-      <PokemonForm
-        nuevoTodo={nuevoTodo}
-        setNuevoTodo={setNuevoTodo}
-        agregarTodo={agregarTodo}
-      />
-
-      {/* Lista separada */}
-      <ul>
-        {todos.map((todo) => (
-          <PokemonItem
-            key={todo.id}
-            todo={todo}
-            toggleTodo={toggleTodo}
-            eliminarTodo={eliminarTodo}
-          />
-        ))}
-      </ul>
-    </div>
+  setTodos(
+    todos.map((t) =>
+      t.id === id ? { ...t, completed: !t.completed } : t
+    )
   );
+}
+
+function eliminarTodo(id) {
+  setTodos(todos.filter(t => t.id !== id));
+}
+
+
+return (
+  <div>
+    <h1>PokéTodos</h1>
+
+    {cargando && <p>Cargando Pokemons....</p>}
+    {error && <p style={{ color: "red" }}>{error}</p>}
+
+    <PokemonForm
+      nuevoTodo={nuevoTodo}
+      setNuevoTodo={setNuevoTodo}
+      agregarTodo={agregarTodo}
+    />
+
+    <ul>
+      {todos.map((todo) => (
+        <PokemonItem
+          key={todo.id}
+          todo={todo}
+          toggleTodo={toggleTodo}
+          eliminarTodo={eliminarTodo}
+        />
+      ))}
+    </ul>
+  </div>
+);
 }
