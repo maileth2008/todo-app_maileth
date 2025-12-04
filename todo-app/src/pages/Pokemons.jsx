@@ -23,13 +23,15 @@ export default function Pokemons(){
     setTodos([...todos, { id: Date.now(), title: nuevoTodo, completed: false }]);
     setNuevoTodo("");
     console.log("Nuevo TODO (capturado en formulario):", nuevoTodo);
-
-    function toggleTodo(id) {
+  }
+ function toggleTodo(id) {
     setTodos(todos.map(t =>
       t.id === id ? { ...t, completed: !t.completed } : t
     ));
   }
-  }
+  function eliminarTodo(id) {
+  setTodos(todos.filter(t => t.id !== id));
+}
 
 
   return (
@@ -44,7 +46,11 @@ export default function Pokemons(){
       {todos.map(todo => (
   <li key={todo.id}>
     {todo.title} — {todo.completed ? "si" : "no"}
+
     <button onClick={() => toggleTodo(todo.id)}>Cambiar estado</button>
+
+     <button onClick={() => eliminarTodo(todo.id)}>Eliminar</button>
+
   </li>
 ))}
 
