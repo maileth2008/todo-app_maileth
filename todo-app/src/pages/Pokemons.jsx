@@ -4,6 +4,8 @@ export default function Pokemons(){
   const [todos, setTodos] = useState([]);
   const [nuevoTodo, setNuevoTodo] = useState("");
   const [cargando, setCargando] = useState(true);
+  const [error, setError] = useState(null);
+
 
 
  useEffect(() => {
@@ -19,8 +21,15 @@ export default function Pokemons(){
       }));
       setTodos(list);
     })
-    .catch(e => console.error(e))
-    .finally(() => setCargando(false));   
+   .catch(err => {
+  console.error(err);
+  setError("Error al cargar los pokemons");   
+})
+
+    .finally(() => setCargando(false)); 
+    
+  
+  
 }, []);
 
 
@@ -48,7 +57,9 @@ export default function Pokemons(){
     <div>
       <h1>PokéTodos</h1>
 
-      {cargando && <p>Cargando Pokemons...</p>} 
+      {cargando && <p>Cargando Pokemons....</p>} 
+      {error && <p style={{ color: "red" }}>{error}</p>}
+
 
       <form onSubmit={agregarTodo}>
         <input value={nuevoTodo} onChange={e => setNuevoTodo(e.target.value)} placeholder="Nuevo Poké-TODO" />
