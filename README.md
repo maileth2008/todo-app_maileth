@@ -127,6 +127,76 @@ Todo esto fortaleció la calidad final del proyecto.
 ejemplo de errores que tuve al intentar hacer el proyecto :
 ![alt text](image.png)
 ![alt text](image-1.png)
+
+
+PokéTodos
+Nuevo Poké-TODO
+Agregar
+bulbasaur — completadoCambiar estadoEliminar
+ivysaur — pendienteCambiar estadoEliminar
+venusaur — pendienteCambiar estadoEliminar
+charmander — pendienteCambiar estadoEliminar
+charmeleon — pendienteCambiar estadoEliminar
+charizard — pendienteCambiar estadoEliminar
+squirtle — pendienteCambiar estadoEliminar
+wartortle — pendienteCambiar estadoEliminar
+blastoise — pendienteCambiar estadoEliminar
+caterpie — pendienteCambiar estadoEliminar
+metapod — pendienteCambiar estadoEliminar
+butterfree — pendienteCambiar estadoEliminar
+weedle — pendienteCambiar estadoEliminar
+kakuna — pendienteCambiar estadoEliminar
+beedrill — pendienteCambiar estadoEliminar
+pidgey — pendienteCambiar estadoEliminar
+pidgeotto — pendienteCambiar estadoEliminar
+pidgeot — pendienteCambiar estadoEliminar
+rattata — pendienteCambiar estadoEliminar
+raticate — pendienteCambiar estadoEliminar
+[plugin:vite:react-babel] /workspaces/todo-app_maileth/todo-app/src/pages/Pokemons.jsx: Identifier 'EditarTodo' has already been declared. (134:9)
+  137 |       <h2>Editar Todo (Pendiente de implementación)</h2>
+/workspaces/todo-app_maileth/todo-app/src/pages/Pokemons.jsx:134:9
+132 |  }
+133 |  
+134 |  function EditarTodo() {
+    |           ^
+135 |    return (
+136 |      <div>
+    at constructor (/workspaces/todo-app_maileth/todo-app/node_modules/@babel/parser/lib/index.js:367:19)
+    at JSXParserMixin.raise (/workspaces/todo-app_maileth/todo-app/node_modules/@babel/parser/lib/index.js:6624:19)
+    at ScopeHandler.checkRedeclarationInScope (/workspaces/todo-app_maileth/todo-app/node_modules/@babel/parser/lib/index.js:1646:19)
+    at ScopeHandler.declareName (/workspaces/todo-app_maileth/todo-app/node_modules/@babel/parser/lib/index.js:1612:12)
+    at JSXParserMixin.registerFunctionStatementId (/workspaces/todo-app_maileth/todo-app/node_modules/@babel/parser/lib/index.js:13542:16)
+    at JSXParserMixin.parseFunction (/workspaces/todo-app_maileth/todo-app/node_modules/@babel/parser/lib/index.js:13526:12)
+    at JSXParserMixin.parseFunctionStatement (/workspaces/todo-app_maileth/todo-app/node_modules/@babel/parser/lib/index.js:13201:17)
+    at JSXParserMixin.parseStatementContent (/workspaces/todo-app_maileth/todo-app/node_modules/@babel/parser/lib/index.js:12867:21)
+    at JSXParserMixin.parseStatementLike (/workspaces/todo-app_maileth/todo-app/node_modules/@babel/parser/lib/index.js:12843:17)
+    at JSXParserMixin.parseModuleItem (/workspaces/todo-app_maileth/todo-app/node_modules/@babel/parser/lib/index.js:12820:17)
+    at JSXParserMixin.parseBlockOrModuleBlockBody (/workspaces/todo-app_maileth/todo-app/node_modules/@babel/parser/lib/index.js:13392:36)
+    at JSXParserMixin.parseBlockBody (/workspaces/todo-app_maileth/todo-app/node_modules/@babel/parser/lib/index.js:13385:10)
+    at JSXParserMixin.parseProgram (/workspaces/todo-app_maileth/todo-app/node_modules/@babel/parser/lib/index.js:12698:10)
+    at JSXParserMixin.parseTopLevel (/workspaces/todo-app_maileth/todo-app/node_modules/@babel/parser/lib/index.js:12688:25)
+    at JSXParserMixin.parse (/workspaces/todo-app_maileth/todo-app/node_modules/@babel/parser/lib/index.js:14568:25)
+    at parse (/workspaces/todo-app_maileth/todo-app/node_modules/@babel/parser/lib/index.js:14602:38)
+    at parser (/workspaces/todo-app_maileth/todo-app/node_modules/@babel/core/lib/parser/index.js:41:34)
+    at parser.next (<anonymous>)
+    at normalizeFile (/workspaces/todo-app_maileth/todo-app/node_modules/@babel/core/lib/transformation/normalize-file.js:64:37)
+    at normalizeFile.next (<anonymous>)
+    at run (/workspaces/todo-app_maileth/todo-app/node_modules/@babel/core/lib/transformation/index.js:22:50)
+    at run.next (<anonymous>)
+    at transform (/workspaces/todo-app_maileth/todo-app/node_modules/@babel/core/lib/transform.js:22:33)
+    at transform.next (<anonymous>)
+    at step (/workspaces/todo-app_maileth/todo-app/node_modules/gensync/index.js:261:32)
+    at /workspaces/todo-app_maileth/todo-app/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/workspaces/todo-app_maileth/todo-app/node_modules/gensync/index.js:223:11)
+    at /workspaces/todo-app_maileth/todo-app/node_modules/gensync/index.js:189:28
+    at /workspaces/todo-app_maileth/todo-app/node_modules/@babel/core/lib/gensync-utils/async.js:67:7
+    at /workspaces/todo-app_maileth/todo-app/node_modules/gensync/index.js:113:33
+    at step (/workspaces/todo-app_maileth/todo-app/node_modules/gensync/index.js:287:14)
+    at /workspaces/todo-app_maileth/todo-app/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/workspaces/todo-app_maileth/todo-app/node_modules/gensync/index.js:223:11)
+Click outside, press Esc key, or fix the code to dismiss.
+You can also disable this overlay by setting server.hmr.overlay to false in vite.config.js.
+
 errores que resolvi con ayuda de la inteligencia artificial
 Lista de commits realizados
 

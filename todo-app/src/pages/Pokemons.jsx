@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import PokemonForm from "./componentes/PokemonForm";
 import PokemonItem from "./componentes/PokemonItem";
+import Filtros from "./Filtros";
+import EditarTodo from "./EditarTodo";
+
 
 
 export default function Pokemons() {
@@ -79,4 +82,5 @@ return (
     </ul>
   </div>
 );
+
 }
