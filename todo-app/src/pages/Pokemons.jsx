@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import PokemonForm from "./componentes/PokemonForm";
 import PokemonItem from "./componentes/PokemonItem";
-import Filtros from "./Filtros";
-import EditarTodo from "./EditarTodo";
+import Filtros from "./componentes/Filtros";
+import EditarTodo from "./componentes/EditarTodo";
 
 
 

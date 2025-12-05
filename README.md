@@ -51,16 +51,18 @@ En la ruta /pokemons
  
  src/
 ├── pages/
-││ ├── componentes/ 
-││ ├── PokemonForm.jsx
-││ ├── PokemonItem.js
-│├── Home.jsx
-│├── Registro.jsx
-│├── Pokemons.jsx
+│  │   ├── componentes/ 
+│  │   ├── PokemonForm.jsx
+│  │   ├── PokemonItem.js
+│  │   ├── PokemonForm.jsx
+│  │   └── Filtros.jsx
+│  ├── Home.jsx
+│  ├── Registro.jsx
+│  └── Pokemons.jsx
 │
 ├── App.jsx
 ├── index.css
-├── main.jsx
+└── main.jsx
 
 
  Tecnologías utilizadas
